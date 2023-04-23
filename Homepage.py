@@ -11,14 +11,19 @@ from PIL import Image
 
 
 #Reading Dataset
-df = pd.read_csv("resources\data\openpubs.csv")
+
+filepath = os.path.abspath(os.path.join(os.getcwd(), "resources", "data", "openpubs.csv"))
+image_path=os.path.abspath(os.path.join(os.getcwd(), "resources", "data", "pub.jpg"))
+
+
+df = pd.read_csv("filepath")
 
 
 #st.title("OPEN PUB WEB APPLICATION")
 st.markdown("<h1 style='text-align: center; color: red;'>OPEN PUB WEB-APP</h1>", unsafe_allow_html=True)
 
 #Reading the Image File
-image = Image.open("resources\images\pub.jpg")
+image = Image.open("image_path")
 st.image(image, use_column_width= True)
 
 #Brief Description about PUB's
