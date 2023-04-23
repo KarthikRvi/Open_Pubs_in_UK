@@ -1,12 +1,14 @@
 import streamlit as st
 import pandas as pd
 import numpy as np
+import os
 
 from PIL import Image
 
 
 # Reading Dataset
-df = pd.read_csv("resources\data\open_pubs.csv")
+filepath = os.path.abspath(os.path.join(os.getcwd(), "resources", "data", "openpubs.csv"))
+df = pd.read_csv(filepath)
 
 df.columns=['fsa_id','name','address','postcode','easting','northing','lat','lon','local_authority']
 
