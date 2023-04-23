@@ -13,7 +13,7 @@ from PIL import Image
 #Reading Dataset
 
 filepath = os.path.abspath(os.path.join(os.getcwd(), "resources", "data", "openpubs.csv"))
-image_path=os.path.abspath(os.path.join(os.getcwd(), "resources", "data", "pub.jpg"))
+image_path=os.path.abspath(os.path.join(os.getcwd(), "resources", "images", "pub.jpg"))
 
 
 df = pd.read_csv(filepath)
